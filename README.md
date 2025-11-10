@@ -1,5 +1,8 @@
 # 📊 BIN-Eye Comparison Tool
 
+## Developed by 'claude-sonnet-4-5-20250929-thinking-32k' on https://lmareana.ai, Assisted by TinToSer
+
+
 A powerful Python-based tool for binary-level file and folder comparison with hex visualization, difference highlighting, and beautiful HTML reports.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -66,19 +69,19 @@ A powerful Python-based tool for binary-level file and folder comparison with he
 
 1. **Clone or Download**
    ```bash
-   git clone https://github.com/yourusername/binary-file-compare.git
-   cd binary-file-compare
+   git clone https://github.com/TinToSer/bin-eye-comparison.git
+   cd bin-eye-comparison
    ```
 
 2. **Verify Installation**
    ```bash
-   python binary_compare.py --help
+   python BIN_Eye_Comparator.py --help
    ```
 
 3. **File Structure**
    ```
-   binary-file-compare/
-   ├── binary_compare.py      # Main script
+   bin-eye-comparison/
+   ├── BIN_Eye_Comparator.py      # Main script
    ├── template_report.html   # HTML template (auto-created if missing)
    └── README.md             # This file
    ```
@@ -89,17 +92,17 @@ A powerful Python-based tool for binary-level file and folder comparison with he
 
 ### Compare Two Files
 ```bash
-python binary_compare.py file1.txt file2.txt
+python BIN_Eye_Comparator.py file1.txt file2.txt
 ```
 
 ### Compare Two Folders with HTML Report
 ```bash
-python binary_compare.py folder1 folder2 --html
+python BIN_Eye_Comparator.py folder1 folder2 --html
 ```
 
 ### Compare with All Features Enabled
 ```bash
-python binary_compare.py folder1 folder2 --side-by-side --html --max-bytes 2048
+python BIN_Eye_Comparator.py folder1 folder2 --side-by-side --html --max-bytes 2048
 ```
 
 ---
@@ -110,7 +113,7 @@ python binary_compare.py folder1 folder2 --side-by-side --html --max-bytes 2048
 
 #### Basic File Comparison
 ```bash
-python binary_compare.py document1.pdf document2.pdf
+python BIN_Eye_Comparator.py document1.pdf document2.pdf
 ```
 
 **Output:**
@@ -122,7 +125,7 @@ python binary_compare.py document1.pdf document2.pdf
 
 #### File Comparison with Side-by-Side View
 ```bash
-python binary_compare.py image1.png image2.png --side-by-side
+python BIN_Eye_Comparator.py image1.png image2.png --side-by-side
 ```
 
 **Features:**
@@ -132,7 +135,7 @@ python binary_compare.py image1.png image2.png --side-by-side
 
 #### File Comparison with HTML Report
 ```bash
-python binary_compare.py binary1.exe binary2.exe --html
+python BIN_Eye_Comparator.py binary1.exe binary2.exe --html
 ```
 
 **Generates:**
@@ -143,7 +146,7 @@ python binary_compare.py binary1.exe binary2.exe --html
 
 #### Advanced File Comparison
 ```bash
-python binary_compare.py large_file1.dat large_file2.dat \
+python BIN_Eye_Comparator.py large_file1.dat large_file2.dat \
   --max-bytes 4096 \
   --side-by-side \
   --html \
@@ -156,7 +159,7 @@ python binary_compare.py large_file1.dat large_file2.dat \
 
 #### Basic Folder Comparison
 ```bash
-python binary_compare.py /path/to/folder1 /path/to/folder2
+python BIN_Eye_Comparator.py /path/to/folder1 /path/to/folder2
 ```
 
 **Features:**
@@ -167,21 +170,21 @@ python binary_compare.py /path/to/folder1 /path/to/folder2
 
 #### Folder Comparison with Extension Filter
 ```bash
-python binary_compare.py folder1 folder2 --extensions .txt .log .dat
+python BIN_Eye_Comparator.py folder1 folder2 --extensions .txt .log .dat
 ```
 
 **Use Case:** Compare only specific file types
 
 #### Non-Recursive Comparison (Top Level Only)
 ```bash
-python binary_compare.py folder1 folder2 --no-recursive
+python BIN_Eye_Comparator.py folder1 folder2 --no-recursive
 ```
 
 **Use Case:** Skip subdirectories
 
 #### Complete Folder Analysis
 ```bash
-python binary_compare.py project_v1 project_v2 \
+python BIN_Eye_Comparator.py project_v1 project_v2 \
   --extensions .py .js .css \
   --html \
   --html-output project_comparison.html \
@@ -195,15 +198,15 @@ python binary_compare.py project_v1 project_v2 \
 #### Custom Hex Display Size
 ```bash
 # Display first 1024 bytes
-python binary_compare.py file1 file2 --max-bytes 1024
+python BIN_Eye_Comparator.py file1 file2 --max-bytes 1024
 
 # Display first 8192 bytes (8KB)
-python binary_compare.py file1 file2 --max-bytes 8192
+python BIN_Eye_Comparator.py file1 file2 --max-bytes 8192
 ```
 
 #### Custom HTML Template
 ```bash
-python binary_compare.py folder1 folder2 \
+python BIN_Eye_Comparator.py folder1 folder2 \
   --html \
   --template custom_template.html \
   --html-output report.html
@@ -211,14 +214,14 @@ python binary_compare.py folder1 folder2 \
 
 #### Multiple Extensions
 ```bash
-python binary_compare.py logs_old logs_new \
+python BIN_Eye_Comparator.py logs_old logs_new \
   --extensions .log .txt .out .err \
   --html
 ```
 
 #### Side-by-Side + HTML
 ```bash
-python binary_compare.py data1 data2 \
+python BIN_Eye_Comparator.py data1 data2 \
   --side-by-side \
   --html \
   --max-bytes 512
@@ -473,16 +476,16 @@ The `template_report.html` uses placeholder syntax: `{{VARIABLE_NAME}}`
 #### Version Comparison
 ```bash
 # Compare compiled binaries
-python binary_compare.py build_v1.0/app.exe build_v2.0/app.exe --html
+python BIN_Eye_Comparator.py build_v1.0/app.exe build_v2.0/app.exe --html
 
 # Compare configuration files
-python binary_compare.py config_old config_new --extensions .conf .ini .xml
+python BIN_Eye_Comparator.py config_old config_new --extensions .conf .ini .xml
 ```
 
 #### Build Verification
 ```bash
 # Verify build reproducibility
-python binary_compare.py build1/output build2/output --html -o build_verification.html
+python BIN_Eye_Comparator.py build1/output build2/output --html -o build_verification.html
 ```
 
 ### 2. Data Integrity
@@ -490,13 +493,13 @@ python binary_compare.py build1/output build2/output --html -o build_verificatio
 #### Backup Verification
 ```bash
 # Verify backup integrity
-python binary_compare.py /data/original /backup/data --html
+python BIN_Eye_Comparator.py /data/original /backup/data --html
 ```
 
 #### File Transfer Verification
 ```bash
 # Verify file transfer
-python binary_compare.py local_file.dat remote_file.dat
+python BIN_Eye_Comparator.py local_file.dat remote_file.dat
 ```
 
 ### 3. Security & Forensics
@@ -504,13 +507,13 @@ python binary_compare.py local_file.dat remote_file.dat
 #### Malware Analysis
 ```bash
 # Compare suspicious files
-python binary_compare.py clean_file.exe suspicious_file.exe --side-by-side --html
+python BIN_Eye_Comparator.py clean_file.exe suspicious_file.exe --side-by-side --html
 ```
 
 #### System File Integrity
 ```bash
 # Check system file modifications
-python binary_compare.py /system/original /system/current --extensions .dll .sys
+python BIN_Eye_Comparator.py /system/original /system/current --extensions .dll .sys
 ```
 
 ### 4. Quality Assurance
@@ -518,13 +521,13 @@ python binary_compare.py /system/original /system/current --extensions .dll .sys
 #### Test Data Validation
 ```bash
 # Compare test results
-python binary_compare.py expected_output actual_output --html
+python BIN_Eye_Comparator.py expected_output actual_output --html
 ```
 
 #### Database Dump Comparison
 ```bash
 # Compare database exports
-python binary_compare.py dump_old.sql dump_new.sql --max-bytes 4096
+python BIN_Eye_Comparator.py dump_old.sql dump_new.sql --max-bytes 4096
 ```
 
 ### 5. Documentation
@@ -532,7 +535,7 @@ python binary_compare.py dump_old.sql dump_new.sql --max-bytes 4096
 #### Archive Comparison
 ```bash
 # Document differences between versions
-python binary_compare.py docs_v1 docs_v2 \
+python BIN_Eye_Comparator.py docs_v1 docs_v2 \
   --extensions .pdf .docx \
   --html \
   --html-output documentation_changes.html
@@ -543,14 +546,14 @@ python binary_compare.py docs_v1 docs_v2 \
 #### Image Comparison
 ```bash
 # Compare image files
-python binary_compare.py images_original images_processed \
+python BIN_Eye_Comparator.py images_original images_processed \
   --extensions .png .jpg .jpeg
 ```
 
 #### Audio/Video Verification
 ```bash
 # Compare media files
-python binary_compare.py master.mp4 encoded.mp4 --max-bytes 8192 --html
+python BIN_Eye_Comparator.py master.mp4 encoded.mp4 --max-bytes 8192 --html
 ```
 
 ---
@@ -744,7 +747,7 @@ chmod +r file1.bin file2.bin
 
 **Solution:** Reduce `--max-bytes`:
 ```bash
-python binary_compare.py large1.dat large2.dat --max-bytes 1024
+python BIN_Eye_Comparator.py large1.dat large2.dat --max-bytes 1024
 ```
 
 #### 5. No Common Files Found
@@ -775,7 +778,7 @@ python binary_compare.py large1.dat large2.dat --max-bytes 1024
 
 **Solution:**
 ```bash
-chmod +x binary_compare.py
+chmod +x BIN_Eye_Comparator.py
 ```
 
 ---
@@ -784,12 +787,12 @@ chmod +x binary_compare.py
 
 ### Example 1: Simple File Comparison
 ```bash
-python binary_compare.py old_version.dll new_version.dll
+python BIN_Eye_Comparator.py old_version.dll new_version.dll
 ```
 
 ### Example 2: Detailed File Analysis
 ```bash
-python binary_compare.py firmware_v1.bin firmware_v2.bin \
+python BIN_Eye_Comparator.py firmware_v1.bin firmware_v2.bin \
   --side-by-side \
   --html \
   --max-bytes 2048 \
@@ -798,7 +801,7 @@ python binary_compare.py firmware_v1.bin firmware_v2.bin \
 
 ### Example 3: Folder Comparison with Filter
 ```bash
-python binary_compare.py project_backup_2024-01-01 project_current \
+python BIN_Eye_Comparator.py project_backup_2024-01-01 project_current \
   --extensions .py .js .json \
   --html \
   --html-output project_diff.html
@@ -806,14 +809,14 @@ python binary_compare.py project_backup_2024-01-01 project_current \
 
 ### Example 4: Non-Recursive Comparison
 ```bash
-python binary_compare.py config_old config_new \
+python BIN_Eye_Comparator.py config_old config_new \
   --no-recursive \
   --extensions .conf .cfg
 ```
 
 ### Example 5: Large Folder Analysis
 ```bash
-python binary_compare.py /data/archive1 /data/archive2 \
+python BIN_Eye_Comparator.py /data/archive1 /data/archive2 \
   --max-bytes 512 \
   --html \
   --html-output archive_comparison_$(date +%Y%m%d).html
@@ -821,7 +824,7 @@ python binary_compare.py /data/archive1 /data/archive2 \
 
 ### Example 6: Custom Template
 ```bash
-python binary_compare.py builds/v1 builds/v2 \
+python BIN_Eye_Comparator.py builds/v1 builds/v2 \
   --html \
   --template company_template.html \
   --html-output build_comparison.html
@@ -840,7 +843,7 @@ ORIGINAL="/data/production"
 BACKUP="/backup/production"
 REPORT="backup_verification_$(date +%Y%m%d_%H%M%S).html"
 
-python binary_compare.py "$ORIGINAL" "$BACKUP" \
+python BIN_Eye_Comparator.py "$ORIGINAL" "$BACKUP" \
   --html \
   --html-output "$REPORT"
 
@@ -862,7 +865,7 @@ import sys
 def compare_files(file1, file2):
     """Wrapper function for binary comparison"""
     result = subprocess.run([
-        'python', 'binary_compare.py',
+        'python', 'BIN_Eye_Comparator.py',
         file1, file2,
         '--html',
         '--html-output', f'comparison_{file1}_{file2}.html'
@@ -896,7 +899,7 @@ jobs:
       
       - name: Compare builds
         run: |
-          python binary_compare.py \
+          python BIN_Eye_Comparator.py \
             expected_output/ \
             actual_output/ \
             --html \
@@ -972,8 +975,8 @@ SOFTWARE.
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/binary-file-compare/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/binary-file-compare/discussions)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/bin-eye-comparison/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/bin-eye-comparison/discussions)
 - **Email**: support@example.com
 
 ---
