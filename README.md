@@ -1,6 +1,6 @@
 # 📊 BIN-Eye Comparison Tool
 
-## Developed by 'claude-sonnet-4-5-20250929-thinking-32k' on https://lmareana.ai, Assisted by TinToSer
+## Developed by 'claude-sonnet-4-5-20250929-thinking-32k' on https://lmarena.ai, Assisted by TinToSer
 
 
 A powerful Python-based tool for binary-level file and folder comparison with hex visualization, difference highlighting, and beautiful HTML reports.
